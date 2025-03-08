@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="roy maurice, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Roy's Portfolio. Full-Stack Web Developer and Android App Developer" />
+
     <title>DevRoy-Portfolio</title>
     <!-- Link To CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./experience/experience.css"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Box Icons -->
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link id='favicon' rel="shortcut icon" href="./images/first.jpg" type="image/x-png">
+
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
 </head>
-<body>
+<body >
     <!-- Navbar -->
     <header>
-        <a href="#" class="logo"><span>Dev</span>Roy</a>
+        <a href="#" class="logo"><i class='bx bxl-mailchimp'></i><span>Dev</span>Roy</a>
+        <!-- <a href="/" class="logo"><i class='bx bx-meteor bx-flip-horizontal' ></i></i><span>Dev</span>Roy</a> -->
+
  
         <div class="bx bx-menu" id="menu-icon"></div>
  
@@ -34,15 +44,25 @@
         </ul>
     </header>
     <!-- Home -->
- 
+    <!-- <canvas id="canvas1"></canvas> -->
+    <!-- <div id="particles"></div> -->
     <section class="home" id="home">
+        <div id="particles-js"></div>
+
         <div class="social">
             <a href="#"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bxl-git' ></i></a>
             <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <!-- <a href="#"><i class='bx bxl-instagram' ></i></a> -->
+            <a href="#"><i class='bx bxl-dev-to'></i></a>
+            <a href="https://buymeacoffee.com/devroy"><i class='bx bx-coffee-togo bx-flashing' ></i></a>
+
+            
+            
         </div>
         <div class="home-img">
-            <img src="./images/first.jpg" alt="">
+            <!-- <div id="particles-js"></div> -->
+            <img  draggable="false" class="tilt" src="./images/first.jpg" alt="">
         </div>
         <div class="home-text">
             <span>Hello, my name is</span>
@@ -54,7 +74,7 @@
                  of IT innovation.</p>
 
              <a href="#about" class="btn">About Me</a>
-            <a href="https://wa.me/737876152?text=Hello, %20I'm%20interested%20in%20Hiring%20your%20services." class="btn">Contact Me</a>
+            <a href="https://wa.me/791518471?text=Hello, %20I'm%20interested%20in%20Hiring%20your%20services." class="btn1">Hire Me</a>
         </div>
  
     </section>
@@ -121,7 +141,7 @@
         <div class="row">
             <div class="about-col-1">
                 <img src="images/mimi.jpeg" alt="">
-                <a href="images/Roy CV.pdf" download class="btn btn2"><i class='bx bxs-download' ></i>Download CV</a>
+                <a href="images/Roy CV.pdf" download class="btn"><i class='bx bxs-download' ></i>Download CV</a>
             </div>
             <div class="about-col-2">
                 <!-- <h1 class="sub-title">About Me</h1> -->
@@ -195,6 +215,7 @@
             </div>
         </div> -->
     </section>
+    <hr><hr>
     <!-- Skills -->
     <section class="skills" id="skills">
         <!-- <div class="heading">
@@ -241,39 +262,71 @@
         </div> -->
  
     </section>
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="heading">
-            <h2>Services</h2>
-            <span>Services I Offer</span>
-        </div>
-        <div class="services-content">
-            <!-- Box 1 -->
-            <div class="services-box">
-                <i class='bx bx-code-alt' ></i>
-                <h3>Web Development</h3>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Box 2 -->
-            <div class="services-box">
-                <i class='bx bx-server' ></i>
-                <h3>Backend Development</h3>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Box 3 -->
-            <div class="services-box">
-                <i class='bx bx-brush' ></i>
-                <h3>UI/UX Design</h3>
-                <a href="#">Learn More</a>
-            </div>
 
-            <div class="services-box">
-                <i class='bx bxl-wordpress' ></i>
-                <h3>Wordpress Developer</h3>
-                <a href="#">Learn More</a>
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="heading">
+                <h2>Services</h2>
+                <span>Services I Offer</span>
             </div>
-        </div>
-    </section>
+            <div class="services-content">
+                <!-- Box 1 -->
+                <div class="services-box">
+                    <i class='bx bx-code-alt' ></i>
+                    <h3>Web Development</h3>
+                    <a href="#">Learn More</a>
+                </div>
+                <!-- Box 2 -->
+                <div class="services-box">
+                    <i class='bx bx-server' ></i>
+                    <h3>Backend Development</h3>
+                    <a href="#">Learn More</a>
+                </div>
+                <!-- Box 3 -->
+                <div class="services-box">
+                    <i class='bx bx-brush' ></i>
+                    <h3>UI/UX Design</h3>
+                    <a href="#">Learn More</a>
+                </div>
+    
+                <div class="services-box">
+                    <i class='bx bxl-wordpress' ></i>
+                    <h3>Wordpress Developer</h3>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <br>
+
+            <div class="services-content">
+                <!-- Box 1 -->
+                <div class="services-box2">
+                    <i class='bx bxl-android'></i>                    
+                    <h3>Mobile App Development</h3>
+                    <a href="#">Learn More</a>
+                </div>
+                <!-- Box 2 -->
+                <div class="services-box2">
+                    <i class='bx bxl-sketch'></i>
+                    <h3>Graphics Design</h3>
+                    <a href="#">Learn More</a>
+                </div>
+                <!-- Box 3 -->
+                <div class="services-box2">
+                    <i class='bx bx-data'></i>
+                    <h3>Database Management System</h3>
+                    <a href="#">Learn More</a>
+                </div>
+    
+                <div class="services-box2">
+                    <i class='bx bx-support'></i>
+                    <h3>IT Support</h3>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+    
+        <hr>
+    
 
     <hr>
 
@@ -282,8 +335,8 @@
 
     <!-- <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1> -->
     <div class="heading">
-        <h2>Education</h2>
-        <span>My Education Background</span>
+        <h2 color="black">Education</h2>
+        <span2>My Education Background</span2>
     </div>
       <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
   
@@ -296,20 +349,42 @@
           <div class="content">
           <h3>Bachelor of Science in Information Technology</h3>
           <p>University of Embu | EMBUNI</p>
-          <h4>2021-2025 | Pursuing</h4>
+          <h4>2021 - 2025 | Pursuing</h4>
           </div>
       </div>
   
       <div class="box">
         <div class="image">
-        <img draggable="false" src="./images/educat/school.jpg" alt="">
+        <img draggable="false" src="./images/modcom.png" alt="">
         </div>
         <div class="content">
         <h3>Mobile Application Development</h3>
         <p>Modcom Institute of Technology | MIT</p>
-        <h4>2021 : APRIL-SEPTEMBER | Completed</h4>
+        <h4>2021 : APRIL - SEPTEMBER | Completed</h4>
         </div>
       </div>
+
+        <div class="box">
+            <div class="image">
+            <img draggable="false" src="./images/CCNA_Logo.jpg" alt="">
+            </div>
+            <div class="content">
+            <h3>Introduction to Cyber Security</h3>
+            <p>Cisco Networking Academy | CNA</p>
+            <h4>2022 : FEBRUARY - JUNE | Completed</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+            <img draggable="false" src="./images/GL-Logo-1.jpg" alt="">
+            </div>
+            <div class="content">
+            <h3>Introduction to Ethical Hacking</h3>
+            <p>Great Learning | GL</p>
+            <h4>2022 : MAY - JUNE | Completed</h4>
+            </div>
+        </div>
   
   </div>
   </section>
@@ -321,11 +396,11 @@
     <section class="portfolio" id="portfolio">
         <div class="heading">
             <h2>Portfolio</h2>
-            <span>Our Recent Work</span>
+            <span>My Recent Work</span>
         </div>
         <div class="portfolio-content">
             <div class="portfolio-img">
-                <img src="blog-2.jpg" alt="">
+                <img src="devroy2.png" alt="">
             </div>
             <div class="portfolio-img">
                 <img src="blog-3.jpg" alt="">
@@ -344,21 +419,32 @@
             </div>
             
         </div>
+        <br>
+        
+        <hr>
 
-        <div class="viewall">
-            <a href="/projects" class="btn"><span>View All</span>
+        <!-- <div class="viewall">
+            <a href="/projects" class="btn" ><span>View All</span> -->
             <!-- <input type="button" value="View All" class="btn"> -->
+              <!-- <i class="fas fa-arrow-right"></i>
+          </a>
+          </div> -->
+
+          <div class="morebtn">
+            <a href="./projects" class="btn"><span>View All</span>
               <i class="fas fa-arrow-right"></i>
           </a>
           </div>
 
     </section>
+    <hr>
+    <hr>
 
         <!-- Experience -->
         <!-- experience section starts -->
 <section class="experience" id="expe">
 
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+    <h2 class="heading"><i class="bx bx-briefcase"></i> Experience </h2>
   
     <div class="timeline">
   
@@ -369,7 +455,7 @@
           </div>
           <div class="desc">
               <h3>Full Stack Developer</h3>
-              <p>Oct 2021 - present</p>
+              <p>July 2024 - present</p>
           </div>
         </div>
       </div>
@@ -377,11 +463,11 @@
       <div class="container left">
         <div class="content">
           <div class="tag">
-            <h2>Mapstreak Flyseas</h2>
+            <h2>Nairobi City Water & Sewerage Co.</h2>
           </div>
           <div class="desc">
-              <h3>Web Developer | Internship</h3>
-              <p>June 2021 - Dec 2021</p>
+              <h3>IT Support | Industrial Attachment</h3>
+              <p>May 2024 - Aug 2024</p>
           </div>
         </div>
       </div>
@@ -389,11 +475,11 @@
       <div class="container right">
         <div class="content">
           <div class="tag">
-            <h2>The Spark Foundation</h2>
+            <h2>N.C.W.S.C</h2>
           </div>
           <div class="desc">
-              <h3>Website Developer | Internship</h3>
-              <p>May 2021 - June 2021</p>
+              <h3>Network Admin | Industrial Attachment</h3>
+              <p>May 2024 - Aug 2024</p>
           </div>
         </div>
       </div>
@@ -401,11 +487,11 @@
       <div class="container left">
         <div class="content">
           <div class="tag">
-            <h2>The Spark Foundation</h2>
+            <h2>Juma Foundation</h2>
           </div>
           <div class="desc">
-              <h3>Mobile Application Developer | Internship</h3>
-              <p>April 2021 - May 2021</p>
+              <h3>Web Dev | Freelancer</h3>
+              <p>Dec 2023</p>
           </div>
         </div>
       </div>
@@ -413,11 +499,11 @@
       <div class="container right">
         <div class="content">
           <div class="tag">
-            <h2>Frshr Technologies</h2>
+            <h2>Modcom Institute of Technology</h2>
           </div>
           <div class="desc">
-              <h3>Wordpress Developer | Internship</h3>
-              <p>April 2021 - April 2021</p>
+              <h3>Mobile App Dev | Student</h3>
+              <p>April 2021 - Aug 2021</p>
           </div>
         </div>
       </div>
@@ -425,7 +511,7 @@
       <div class="container left">
         <div class="content">
           <div class="tag">
-            <h2>WonderingBlog</h2>
+            <h2>Modcom Institute of Technology</h2>
           </div>
           <div class="desc">
               <h3>Web Development & SEO | Internship</h3>
@@ -453,8 +539,9 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="heading">
-            <h2>Contact</h2>
-            <span>Connect With Us</span>
+            <!-- <h2>Contact</h2> -->
+            <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+            <span>Connect With Me</span>
         </div>
         <div class="contact-form">
             <form action="">
@@ -462,18 +549,45 @@
                 <input type="email" name="" id="" placeholder="Your Email">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
                 <input type="button" value="Send" class="contact-button">
+                <!-- <i class='bx bx-paper-plane'></i> -->
             </form>
+
+            <!-- <form id="contact-form">
+      
+                <div class="form-group">
+                  <div class="field">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <i class='fas fa-user'></i>
+                  </div>
+                  <div class="field">
+                    <input type="text" name="email" placeholder="Email" required>
+                    <i class='fas fa-envelope'></i>
+                  </div>
+                  <div class="field">
+                    <input type="text" name="phone" placeholder="Phone">
+                    <i class='fas fa-phone-alt'></i>
+                  </div>
+                  <div class="message">
+                  <textarea placeholder="Message" name="message" required></textarea>
+                  <i class="fas fa-comment-dots"></i>
+                  </div>
+                  </div>
+                <div class="button-area">
+                  <button type="submit">
+                    Submit <i class='bx bx-paper-plane'></i></button>
+                </div>
+              </form> -->
         </div>
     </section>
 
 
-    <div class="container">
-        <div class="row">
+    <!-- <div class="container">
+        <div class="row"> -->
             <!-- <div class="image-box">
                 <img draggable="false" src="./contact1.png" alt="">
             </div> -->
-            <div class="contact-left">
-                <img draggable="false" class="sub-title" src="./contact1.png" alt="">
+            <!-- <div class="contact-left">
+                <img draggable="false" class="sub-title" src="./contact1.png" alt=""> -->
                 <!-- <h1 class="sub-title">Contact Me</h1> -->
                 <!-- <p><i class='bx bx-mail-send'></i>roymaurice10@gmail.com</p>
                 <p><i class='bx bx-phone-call bx-burst' ></i>0791518471</p> -->
@@ -486,17 +600,17 @@
                     <a href="#"><i class='bx bxl-slack'></i></a> -->
                     <!-- <a href="#"><i class='bx bx-envelope-open'></i></a> -->
                     <!-- <a href="#"><i class='bx bxl-instagram'></i></a> -->
-                </div>
-            </div>
-            <div class="contact-right">
+                <!-- </div>
+            </div> -->
+            <!-- <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" spellcheck="true" lang="en" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn1"></i><i class='bx bx-paper-plane' ></i>Submit</button>
+                    <button type="submit" class="btn btn1"></i></i>Submit</button>
                 </form>
                 <span id="msg"></span>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -554,20 +668,69 @@
     </div> -->
     <!-- Copyright -->
     <div class="copyright">
-        <p>Create By <a href="">Roy Maurice</a> | All Right Reserved &copy; <span id="current year"></span></p>
+        <p>Designed By <a href="">Roy Maurice</a> | All Rights Reserved &copy; <span id="current year"></span></p>
         <script> document.getElementById("current year").innerText = new Date().getFullYear();</script>
     </div>
  
+
+    <!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
  
-    <!-- particle.js links -->
+<!-- particle.js links -->
 <script src="./js/particles.min.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/script.js"></script>
+<script src="script.js"></script>
+<script src="app.js"></script>
+
+
+
 
 
 
     <!-- Link To JS -->
-    <script src="./js/script.js"></script>
-    <script src="./experience/experience.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="app.js"></script> -->
+    <!-- <script src="particles.js"></script>
+    <script src="./experience/experience.js"></script> -->
+
+    <!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+
+
+    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src=".js/script.js"></script>
 
 </body>
 </html>

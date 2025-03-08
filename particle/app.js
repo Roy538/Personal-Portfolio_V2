@@ -23,18 +23,13 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        // "value": "#000000"
-        "value": "#ff4c05"
-
+        "value": "#ffffff"
       },
-      
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          // "color": "#000000"
-          "color": "#ff4c05"
-
+          "color": "#000000"
         },
         "polygon": {
           "nb_sides": 5
@@ -46,7 +41,7 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.6,
+        "value": 0.5,
         "random": false,
         "anim": {
           "enable": false,
@@ -68,9 +63,8 @@ particlesJS('particles-js',
       "line_linked": {
         "enable": true,
         "distance": 150,
-        // "color": "#000000",
-        "color": "#ff4c05",
-        "opacity": 0.5,
+        "color": "#ffffff",
+        "opacity": 0.4,
         "width": 1
       },
       "move": {
@@ -128,8 +122,7 @@ particlesJS('particles-js',
     "retina_detect": true,
     "config_demo": {
       "hide_card": false,
-      "background_color": "#000000",
-      // "background_color": "#ff4c05",
+      "background_color": "#b61924",
       "background_image": "",
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
@@ -138,38 +131,3 @@ particlesJS('particles-js',
   }
 
 );
-
-
-
-
-
-
-
-// particlesJS('particles-js', {
-//   // ... other particle configuration options ...
-//   "particles": {
-//     "color": {
-//       // Use a function to dynamically determine the color based on theme
-//       "value": () => {
-//         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//           return '#ff4c05'; // Dark theme color
-//         } else {
-//           return '#000000'; // Light theme color
-//         }
-//       }
-//     },
-//     "shape": {
-//       "stroke": {
-//         "color": () => {
-//           if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//             return '#ff4c05'; // Dark theme color
-//           } else {
-//             return '#000000'; // Light theme color
-//           }
-//         }
-//       }
-//     },
-//     // ... other particle properties ...
-//   },
-//   // ... other configuration options ...
-// });
