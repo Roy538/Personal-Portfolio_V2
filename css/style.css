@@ -672,13 +672,13 @@ span {
 .services-box2:hover .bx{
   color: #22cf91;
 }
-.services-box a {
+.services-box a, .services-box2 a {
   color: var(--main-color2);
   /* color: rgb(2, 166, 70); */
   font-size: var(--p-font);
   font-weight: 500;
 }
-.services-box:hover a{
+.services-box:hover a, .services-box2:hover a{
   color: #8b8a8f;
 }
 .portfolio-content {
