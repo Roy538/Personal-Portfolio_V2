@@ -523,12 +523,24 @@
             <span>Connect With Me</span>
         </div>
         <div class="contact-form">
-            <form action="https://formspree.io/f/mldjelyb" method="POST">
+            <!-- <form action="https://formspree.io/f/mldjelyb" method="POST">
                 <input type="text" placeholder="Your Name">
                 <input type="email" name="" id="" placeholder="Your Email">
                 <textarea name="msg" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                <input type="button" value="Send" class="contact-button">
+                <input type="button" value="Send" class="contact-button"> -->
                 <!-- <i class='bx bx-paper-plane'></i> -->
+                <form id="contactForm" action="https://formspree.io/f/mldjelyb" method="POST">
+                    <input type="text" id="name" placeholder="Your Name">
+                    <!-- <span class="error" id="nameError">Name is required!</span> -->
+                    
+                    <input type="email" id="email" placeholder="Your Email">
+                    <span class="error" id="emailError">Valid email is required!</span>
+                    
+                    <textarea id="message" name="msg" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+                    <span class="error" id="messageError">Message cannot be empty!</span>
+                    
+                    <input type="button" value="Send" class="contact-button" onclick="validateForm()">
+                </form>
             </form>
 
             <!-- <form id="contact-form">
