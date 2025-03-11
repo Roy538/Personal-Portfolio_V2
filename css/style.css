@@ -612,7 +612,7 @@ span {
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   justify-content: center;
   gap: 2rem;
-  padding-top: 65px;
+  padding-top: 35px;
   /* margin-top: 2rem; */
 }
 .services-box {
