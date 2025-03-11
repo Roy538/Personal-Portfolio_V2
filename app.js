@@ -137,38 +137,47 @@ animate();
 
 
 //FORM
-function validateForm() {
-    let isValid = true;
-    let name = document.getElementById("name");
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
-    
-    let nameError = document.getElementById("nameError");
-    let emailError = document.getElementById("emailError");
-    let messageError = document.getElementById("messageError");
-    
-    // Reset errors
-    nameError.style.display = "none";
-    emailError.style.display = "none";
-    messageError.style.display = "none";
-    
-    if (name.value.trim() === "") {
-        nameError.style.display = "block";
-        isValid = false;
-    }
-    
-    if (email.value.trim() === "" || !email.value.includes("@")) {
-        emailError.style.display = "block";
-        isValid = false;
-    }
-    
-    if (message.value.trim() === "") {
-        messageError.style.display = "block";
-        isValid = false;
-    }
-    
-    if (isValid) {
-        alert("Form submitted successfully!");
-        document.getElementById("contactForm").reset();
-    }
-}
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  let isValid = true;
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let message = document.getElementById("message");
+  
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
+  let messageError = document.getElementById("messageError");
+  
+  // Reset errors
+  nameError.style.display = "none";
+  nameError.style.opacity = "0";
+  emailError.style.display = "none";
+  emailError.style.opacity = "0";
+  messageError.style.display = "none";
+  messageError.style.opacity = "0";
+  
+  if (name.value.trim() === "") {
+      nameError.style.display = "block";
+      setTimeout(() => nameError.style.opacity = "1", 10);
+      isValid = false;
+  }
+  
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email.value.trim())) {
+      emailError.style.display = "block";
+      setTimeout(() => emailError.style.opacity = "1", 10);
+      isValid = false;
+  }
+  
+  if (message.value.trim() === "") {
+      messageError.style.display = "block";
+      setTimeout(() => messageError.style.opacity = "1", 10);
+      isValid = false;
+  }
+  
+  if (!isValid) {
+      event.preventDefault();
+  } else {
+      alert("Form submitted successfully!");
+      document.getElementById("contactForm").reset();
+  }
+});
