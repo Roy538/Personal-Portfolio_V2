@@ -605,15 +605,15 @@ span {
 
 /* ----------SERVICES------------ */
  .services{
-  margin-top: -10%;
+  margin-top: 10%;
  }
 .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   justify-content: center;
   gap: 1rem;
-  padding-top: -40px;
-  /* margin-top: 2rem; */
+  /* padding-top: -40px; */
+  margin-top: 2rem;
 }
 .services-box {
   padding: 20px;
