@@ -133,3 +133,42 @@ window.addEventListener('resize',
 
 init();
 animate();
+
+
+
+//FORM
+function validateForm() {
+    let isValid = true;
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let messageError = document.getElementById("messageError");
+    
+    // Reset errors
+    nameError.style.display = "none";
+    emailError.style.display = "none";
+    messageError.style.display = "none";
+    
+    if (name.value.trim() === "") {
+        nameError.style.display = "block";
+        isValid = false;
+    }
+    
+    if (email.value.trim() === "" || !email.value.includes("@")) {
+        emailError.style.display = "block";
+        isValid = false;
+    }
+    
+    if (message.value.trim() === "") {
+        messageError.style.display = "block";
+        isValid = false;
+    }
+    
+    if (isValid) {
+        alert("Form submitted successfully!");
+        document.getElementById("contactForm").reset();
+    }
+}
