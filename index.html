@@ -529,18 +529,28 @@
                 <textarea name="msg" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
                 <input type="button" value="Send" class="contact-button"> -->
                 <!-- <i class='bx bx-paper-plane'></i> -->
-                <form id="contactForm" action="https://formspree.io/f/mldjelyb" method="POST">
+                <!-- <form id="contactForm" action="https://formspree.io/f/mldjelyb" method="POST">
                     <input type="text" id="name" placeholder="Your Name">
-                    <!-- <span class="error" id="nameError">Name is required!</span> -->
+                    <span class="error" id="nameError">Name is required!</span>
                     
                     <input type="email" id="email" placeholder="Your Email">
-                    <!-- <span class="error" id="emailError">Valid email is required!</span> -->
+                    <span class="error" id="emailError">Valid email is required!</span>
                     
                     <textarea id="message" name="msg" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                    <!-- <span class="error" id="messageError">Message cannot be empty!</span> -->
+                    <span class="error" id="messageError">Message cannot be empty!</span>
                     
                     <button type="submit" class="contact-button">Send</button>
-                </form>
+                </form> -->
+
+                <!-- <div class="contact-right"> -->
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" spellcheck="true" lang="en" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn1"></i><i class='bx bx-paper-plane' ></i>Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             <!-- </form> -->
 
             <!-- <form id="contact-form">
