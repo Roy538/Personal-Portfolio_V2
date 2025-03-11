@@ -67,23 +67,23 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 // disable developer mode
-document.onkeydown = function(e) {
-    if(e.keyCode == 123) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
+// document.onkeydown = function(e) {
+//     if(e.keyCode == 123) {
+//         return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//         return false;
+//     }
+// }
 
 
 document.addEventListener('visibilitychange',
@@ -98,21 +98,4 @@ document.addEventListener('visibilitychange',
         }
     });
 
-    //  ----------------GOOGLE-SHEET JS SCRIPT-------------- -->
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxeyKJ4Vx-tECIz_DZCCC5E2nLlkDcnPnvakVUHNP92jhvjp8KUiOBVbK8x2XaFJ2YotQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        // .then(response => console.log('Success!', response))
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },1000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
+

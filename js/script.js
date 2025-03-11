@@ -128,3 +128,22 @@ srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
 
 
+
+    //  ----------------GOOGLE-SHEET JS SCRIPT-------------- -->
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxeyKJ4Vx-tECIz_DZCCC5E2nLlkDcnPnvakVUHNP92jhvjp8KUiOBVbK8x2XaFJ2YotQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },1000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
