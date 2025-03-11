@@ -39,7 +39,7 @@ var typed = new Typed(".typing",{
     loop: true
 });
 var typed = new Typed(".typing-2",{
-    strings: ["Web Developer", "Mobile App Developer", "Programmer", "DataBase Administrator", "IT specialist"],
+    strings: ["Web Developer", "Mobile App Developer", "Programmer", "DataBase Administrator", "IT specialist", "Graphics Designer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
