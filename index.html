@@ -543,15 +543,34 @@
                 </form> -->
 
                 <!-- <div class="contact-right"> -->
-                    <form name="submit-to-google-sheet">
+                    <!-- <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" spellcheck="true" lang="en" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn1"></i>Submit</button>
-                        <!-- <i class='bx bx-paper-plane' ></i> -->
+                        <i class='bx bx-paper-plane' ></i>
                     </form>
                     <span id="msg"></span>
-                </div>
+                </div> -->
+
+      <!--contact section design-->
+      <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form id="contact_form" action="https://formspree.io/f/xovjnbdl" method="POST" autocomplete="on">
+            <div class="input-box">
+                <input type="text" name="name" id="name" placeholder="Full Name" required autocomplete="name">
+                <input type="email" name="email" id="email" placeholder="Email Address" required autocomplete="email">
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" id="phone" placeholder="Mobile Number" required autocomplete="tel">
+                <input type="text" name="subject" id="subject" placeholder="Email Subject" autocomplete="off">
+            </div>
+            <textarea name="message" cols="30" rows="10" id="message" placeholder="Your Message" required autocomplete="off"></textarea>
+            <input type="submit" id="SubmitButton" value="Send Message" class="btn">
+        </form>
+        <p id="output"></p>
+      </section>
+
             <!-- </form> -->
 
             <!-- <form id="contact-form">
