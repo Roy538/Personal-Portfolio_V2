@@ -33,7 +33,7 @@
 
     //typing animation 
 var typed = new Typed(".typing",{
-    strings: ["Web Development","Software Dev...","Graphic Design", "Mobile App Dev...", "DataBase Admin...","UI / UX Design", "Programming"],
+    strings: ["Web Dev...","Software Dev...","Graphic Design", "Mobile App Dev...", "DB Admin...","UI / UX Design", "Programming"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
