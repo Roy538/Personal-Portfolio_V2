@@ -611,7 +611,7 @@ span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   padding-top: 60px;
   /* margin-top: 2rem; */
 }
