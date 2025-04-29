@@ -33,7 +33,8 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    ctx.fillStyle = '#8C5523';
+    // ctx.fillStyle = '#8C5523';
+    ctx.fillStyle = '#28A072FF';
     ctx.fill();
   }
   // check particle position, check mouse position, move the particle, draw the particle
