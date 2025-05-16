@@ -63,7 +63,7 @@ class Particle {
       // }
       // if (mouse.y > this.y && this.y > this.size * 10){
         // this.y -=10;
-      // }
+      }
     }
     // move particle
     this.x += this.directionX;
