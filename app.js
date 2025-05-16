@@ -52,7 +52,7 @@ class Particle {
     // let dy = mouse.y - this.y;
     // let distance = Math.sqrt(dx*dy + dy*dy);
     // if (distance < mouse.radius + this.size){
-      if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+      // if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
         this.x +=10;
       }
       if (mouse.x > this.x && this.x > this.size * 10) {
