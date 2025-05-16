@@ -59,7 +59,7 @@ class Particle {
         this.x -= 10; 
       }
       if (mouse.y < this.y && this.y < canvas.height - this.size * 10){
-        // this.y += 10;
+        this.y += 10;
       // }
       // if (mouse.y > this.y && this.y > this.size * 10){
         // this.y -=10;
