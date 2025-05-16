@@ -50,7 +50,7 @@ class Particle {
     // check collission detection - mouse position / particle position
     // let dx = mouse.x - this.x;
     // let dy = mouse.y - this.y;
-    let distance = Math.sqrt(dx*dy + dy*dy);
+    // let distance = Math.sqrt(dx*dy + dy*dy);
     if (distance < mouse.radius + this.size){
       if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
         this.x +=10;
