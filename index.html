@@ -20,11 +20,26 @@
 
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <!-- Transition Animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
 </head>
 <body >
+    <!-- Custom cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Page loader -->
+    <div class="loader-wrapper">
+      <div class="loader-panel top"></div>
+      <div class="loader-panel bottom"></div>
+      <div class="loader-content">
+        <div class="loader-brand"><span>Dev</span>Roy</div>
+        <div class="loader-counter">0</div>
+        <div class="loader-bar-track">
+          <div class="loader-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <header>
     <a href="#" class="logo">
@@ -48,7 +63,7 @@
     <!-- <canvas id="canvas1"></canvas> -->
     <!-- <div id="particles"></div> -->
     <section class="home" id="home">
-        <div id="particles-js"></div>
+        <canvas id="hero-canvas"></canvas>
 
         <div class="social">
             <a href="https://github.com/Roy538"><i class='bx bxl-github'></i></a>
@@ -147,12 +162,27 @@
             <div class="about-col-2">
                 <!-- <h1 class="sub-title">About Me</h1> -->
                 <div class="text">I'm Roy and I'm a <span class="typing-2"></span></div>
-                <p>My commitment to staying at the forefront of technology drives 
-                    my success in delivering efficient solutions. I believe in technology's 
-                    power to transform businesses and lives. Whether it's designing captivating 
+                <p>My commitment to staying at the forefront of technology drives
+                    my success in delivering efficient solutions. I believe in technology's
+                    power to transform businesses and lives. Whether it's designing captivating
                     web interfaces, developing cutting edge apps, or optimizing data storage and retrieval,
-                    I'm your go to IT professional for transforming digital ideas into reality. 
+                    I'm your go to IT professional for transforming digital ideas into reality.
                     Join me in exploring the limitless potential of tech.</p>
+
+                         <div class="about-stats">
+                             <div class="stat-item">
+                                 <span class="stat-number">4+</span>
+                                 <span class="stat-label">Years Experience</span>
+                             </div>
+                             <div class="stat-item">
+                                 <span class="stat-number">20+</span>
+                                 <span class="stat-label">Projects Done</span>
+                             </div>
+                             <div class="stat-item">
+                                 <span class="stat-number">3</span>
+                                 <span class="stat-label">Certifications</span>
+                             </div>
+                         </div>
 
                          <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -250,57 +280,53 @@
                 <span>Services I Offer</span>
             </div>
             <div class="services-content">
-                <!-- Box 1 -->
-                <div class="services-box">
-                    <i class='bx bx-code-alt' ></i>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bx-code-alt'></i></div>
                     <h3>Web Development</h3>
-                    <a href="#">Learn More</a>
+                    <p>Crafting responsive, performant websites with modern HTML, CSS &amp; JavaScript.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-                <!-- Box 2 -->
-                <div class="services-box">
-                    <i class='bx bx-server' ></i>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bx-server'></i></div>
                     <h3>Backend Development</h3>
-                    <a href="#">Learn More</a>
+                    <p>Building robust server-side logic, REST APIs, and scalable system architecture.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-                <!-- Box 3 -->
-                <div class="services-box">
-                    <i class='bx bx-brush' ></i>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bx-brush'></i></div>
                     <h3>UI/UX Design</h3>
-                    <a href="#">Learn More</a>
+                    <p>Designing intuitive, user-centred interfaces with a focus on clarity and flow.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-    
-                <div class="services-box">
-                    <i class='bx bxl-wordpress' ></i>
-                    <h3>Wordpress Developer</h3>
-                    <a href="#">Learn More</a>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bxl-wordpress'></i></div>
+                    <h3>WordPress Development</h3>
+                    <p>Building and customising WordPress sites with themes, plugins &amp; performance tuning.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-            </div>
-            <br>
-
-            <div class="services-content">
-                <!-- Box 1 -->
-                <div class="services-box2">
-                    <i class='bx bxl-android'></i>                    
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bxl-android'></i></div>
                     <h3>Mobile App Development</h3>
-                    <a href="#">Learn More</a>
+                    <p>Developing native Android applications using Kotlin and Java for real-world use.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-                <!-- Box 2 -->
-                <div class="services-box2">
-                    <i class='bx bxl-sketch'></i>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bxl-sketch'></i></div>
                     <h3>Graphics Design</h3>
-                    <a href="#">Learn More</a>
+                    <p>Creating logos, brand assets, and visual materials that communicate with impact.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-                <!-- Box 3 -->
-                <div class="services-box2">
-                    <i class='bx bx-data'></i>
-                    <h3>Database Management System</h3>
-                    <a href="#">Learn More</a>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bx-data'></i></div>
+                    <h3>Database Management</h3>
+                    <p>Designing, optimising, and maintaining relational databases with MySQL.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
-    
-                <div class="services-box2">
-                    <i class='bx bx-support'></i>
+                <div class="services-card">
+                    <div class="services-icon"><i class='bx bx-support'></i></div>
                     <h3>IT Support</h3>
-                    <a href="#">Learn More</a>
+                    <p>Diagnosing and resolving hardware, software, and network issues efficiently.</p>
+                    <a href="#">Explore <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
         </section>
@@ -378,43 +404,214 @@
             <h2>Portfolio</h2>
             <span>My Recent Work</span>
         </div>
-        <div class="portfolio-content">
-            <div class="portfolio-img">
-                <img src="devroy2.png" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-3.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-4.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-5.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-6.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-7.jpg" alt="">
-            </div>
-            
+
+        <p class="portfolio-intro">A selection of projects showcasing my ability to build modern digital solutions across web, mobile, design, and IT support.</p>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web-dev">Web Dev</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="ui-ux">UI / UX</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
         </div>
-        <br>
-        
-        <hr>
 
-        <!-- <div class="viewall">
-            <a href="/projects" class="btn" ><span>View All</span> -->
-            <!-- <input type="button" value="View All" class="btn"> -->
-              <!-- <i class="fas fa-arrow-right"></i>
-          </a>
-          </div> -->
+        <div class="portfolio-content">
 
-          <div class="morebtn">
-            <a href="./projects" class="btn"><span>View All</span>
-              <i class="fas fa-arrow-right"></i>
-          </a>
-          </div>
+            <!-- ── Web Dev ── -->
+            <div class="portfolio-card" data-category="web-dev">
+                <div class="portfolio-thumb">
+                    <img src="devg.jpg" alt="DevRoy Portfolio V1">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Web Dev</span>
+                        <h3>DevRoy Portfolio V2</h3>
+                        <div class="portfolio-links">
+                            <a href="#" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/Personal-Portfolio_V2" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="web-dev">
+                <div class="portfolio-thumb">
+                    <img src="https://raw.githubusercontent.com/Roy538/WeatherWeb/main/weatherapp.png" alt="Weather Web App">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Web Dev</span>
+                        <h3>Weather Web App</h3>
+                        <div class="portfolio-links">
+                            <a href="#" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/WeatherWeb" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="web-dev">
+                <div class="portfolio-thumb">
+                    <img src="https://raw.githubusercontent.com/Roy538/Charity-Website-HTML-CSS-JS/main/img/carousel-1.jpg" alt="Serve the Streets Charity Website">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Web Dev</span>
+                        <h3>Serve the Streets — Charity Site</h3>
+                        <div class="portfolio-links">
+                            <a href="https://serve-the-streets.netlify.app/" title="Live Demo" target="_blank" rel="noopener"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/Charity-Website-HTML-CSS-JS" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Mobile ── -->
+            <div class="portfolio-card pf-infini" data-category="mobile">
+                <div class="portfolio-thumb">
+                    <img src="infini-showcase.png" alt="Infini Fleet Tracking App">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Mobile · Play Store</span>
+                        <h3>Infini — Fleet Tracking</h3>
+                        <div class="pf-stack">
+                            <span>Kotlin</span>
+                            <span>Android</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.riverlongtracking.infini" target="_blank" rel="noopener" class="pf-github-btn">
+                                <i class='bx bxl-play-store'></i> Play Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card pf-snapthread" data-category="mobile">
+                <div class="portfolio-thumb">
+                    <img src="snapthread-ui.png" alt="Snapthread — Social App UI">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Mobile · Social</span>
+                        <h3>Snapthread</h3>
+                        <div class="pf-stack">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Roy538/snapthread-react-native-app" target="_blank" rel="noopener" class="pf-github-btn">
+                                <i class='bx bxl-github'></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card pf-dosemate" data-category="mobile">
+                <div class="portfolio-thumb">
+                    <div class="dm-screens">
+                        <img src="https://raw.githubusercontent.com/Roy538/DoseMate-react-native-app/main/media/Auth.jpg" alt="DoseMate Auth Screen">
+                        <img src="https://raw.githubusercontent.com/Roy538/DoseMate-react-native-app/main/media/Home.jpg" alt="DoseMate Home Screen">
+                        <img src="https://raw.githubusercontent.com/Roy538/DoseMate-react-native-app/main/media/Calender2.jpg" alt="DoseMate Calendar Screen">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Mobile · Health Tech</span>
+                        <h3>DoseMate — Medication Reminder</h3>
+                        <div class="pf-stack">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Roy538/DoseMate-react-native-app" title="View on GitHub" target="_blank" rel="noopener" class="pf-github-btn">
+                                <i class='bx bxl-github'></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card pf-budget" data-category="mobile">
+                <div class="portfolio-thumb">
+                    <img src="budget-tracker.jpeg" alt="Budget Tracker App">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Mobile · Finance</span>
+                        <h3>Budget Tracker</h3>
+                        <div class="pf-stack">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Roy538/react-native-Expense-Tracker-app" target="_blank" rel="noopener" class="pf-github-btn">
+                                <i class='bx bxl-github'></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── UI / UX ── -->
+            <div class="portfolio-card" data-category="ui-ux">
+                <div class="portfolio-thumb">
+                    <img src="blog-6.jpg" alt="Gamified Financial Literacy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">UI / UX</span>
+                        <h3>Gamified Financial Literacy</h3>
+                        <div class="portfolio-links">
+                            <a href="https://finliteracy.netlify.app/" title="Live Demo" target="_blank" rel="noopener"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/Gamified_Financial_Literacy" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="ui-ux">
+                <div class="portfolio-thumb">
+                    <img src="https://raw.githubusercontent.com/Roy538/Mugeni-portfolio/main/LucyM/uploads/lucy-2.jpg" alt="Mugeni Portfolio Design" onerror="this.src='https://raw.githubusercontent.com/Roy538/Mugeni-portfolio/main/LucyM/images/bg.png'">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">UI / UX</span>
+                        <h3>Mugeni — Portfolio Design</h3>
+                        <div class="portfolio-links">
+                            <a href="#" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/Mugeni-portfolio" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Backend ── -->
+            <div class="portfolio-card" data-category="backend">
+                <div class="portfolio-thumb">
+                    <img src="blog-3.jpg" alt="E-Commerce PHP">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Backend</span>
+                        <h3>E-Commerce PHP Platform</h3>
+                        <div class="portfolio-links">
+                            <a href="#" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/ecommerce-php" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="backend">
+                <div class="portfolio-thumb">
+                    <img src="https://raw.githubusercontent.com/Roy538/PYTHON_RealTime-Stock-Price/main/currstock.PNG" alt="Real-Time Stock Price Tracker">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Backend</span>
+                        <h3>Real-Time Stock Price Tracker</h3>
+                        <div class="portfolio-links">
+                            <a href="#" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                            <a href="https://github.com/Roy538/PYTHON_RealTime-Stock-Price" title="Source Code" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="morebtn">
+            <a href="./projects" class="btn">
+                <span>View All Projects</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </div>
 
     </section>
     <hr>
@@ -706,58 +903,34 @@
 <!-- typed.js cdn -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
  
-<!-- particle.js links -->
-<script src="./js/particles.min.js"></script>
-<script src="./js/app.js"></script>
+<!-- Core scripts -->
 <script src="./js/script.js"></script>
-<script src="script.js"></script>
-<!-- <script src="app.js"></script> -->
+<script src="./script.js"></script>
 
 
 
 
 
 
-    <!-- Link To JS -->
-    <!-- <script src="script.js"></script> -->
-    <!-- <script src="app.js"></script> -->
-    <!-- <script src="particles.js"></script>
-    <script src="./experience/experience.js"></script> -->
-
-    <!-- vanilla tilt.js links -->
+    <!-- Vanilla Tilt -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
 
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-    <!-- Transition Animation JS -->
-     <script src="https//unpkg.com/aos@next/dist/aos.js"></script>
-     <script>
-        AOS.init({offset:0});
-     </script>
-
-
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<!-- Three.js hero scene -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./js/hero-scene.js"></script>
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- Lenis smooth scroll -->
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<!-- Cinematic animations (must load last) -->
+<script src="./js/cinematic.js"></script>
 
 
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src=".js/script.js"></script>
 
 </body>
 </html>
