@@ -9,13 +9,11 @@
      
     window.addEventListener('scroll', () => {
         header.classList.toggle('shadow', window.scrollY > 0);
+        navbar.classList.remove('active');
     });
-     
+
     menu.onclick = () => {
         navbar.classList.toggle('active');
-    }
-    window.onscroll = () => {
-        navbar.classList.remove('active');
     }
      
     // Dark Mode
@@ -62,6 +60,89 @@ var typed = new Typed(".typing-2",{
     }
 
 
+// Infini card — 3-D tilt on hover
+(function () {
+    const card = document.querySelector('.pf-infini');
+    if (!card || typeof VanillaTilt === 'undefined') return;
+    VanillaTilt.init(card, {
+        max: 7,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.16,
+        perspective: 950,
+        scale: 1.02,
+    });
+})();
+
+// Budget Tracker card — 3-D tilt on hover
+(function () {
+    const card = document.querySelector('.pf-budget');
+    if (!card || typeof VanillaTilt === 'undefined') return;
+    VanillaTilt.init(card, {
+        max: 7,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.14,
+        perspective: 950,
+        scale: 1.02,
+    });
+})();
+
+// Snapthread featured card — 3-D tilt on hover
+(function () {
+    const card = document.querySelector('.pf-snapthread');
+    if (!card || typeof VanillaTilt === 'undefined') return;
+    VanillaTilt.init(card, {
+        max: 8,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.18,
+        perspective: 900,
+        scale: 1.03,
+    });
+})();
+
+// DoseMate card — 3-D tilt on hover
+(function () {
+    const card = document.querySelector('.pf-dosemate');
+    if (!card || typeof VanillaTilt === 'undefined') return;
+    VanillaTilt.init(card, {
+        max: 6,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.12,
+        perspective: 1000,
+        scale: 1.02,
+    });
+})();
+
+// Portfolio filter
+(function () {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.portfolio-card[data-category]');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            cards.forEach(card => {
+                const match = filter === 'all' || card.dataset.category === filter;
+                card.classList.remove('pf-fade-in');
+                if (match) {
+                    card.classList.remove('pf-hidden');
+                    void card.offsetWidth; // reflow to re-trigger animation
+                    card.classList.add('pf-fade-in');
+                } else {
+                    card.classList.add('pf-hidden');
+                }
+            });
+        });
+    });
+})();
+
        // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
@@ -80,52 +161,7 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // pre loader end
 
 
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
-
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
-
-/* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
-
-
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
-
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
-
-/* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
-
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
+    /* ScrollReveal replaced by GSAP ScrollTrigger in js/cinematic.js */
 
 
 
@@ -133,8 +169,8 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxeyKJ4Vx-tECIz_DZCCC5E2nLlkDcnPnvakVUHNP92jhvjp8KUiOBVbK8x2XaFJ2YotQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
+
+    if (form) form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         // .then(response => console.log('Success!', response))

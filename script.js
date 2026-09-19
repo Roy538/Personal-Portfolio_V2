@@ -31,26 +31,18 @@ $(document).ready(function(){
     });
 // });
 
-// smooth scrolling
+// smooth scrolling — delegate to Lenis when available, fall back to jQuery animate
 $('a[href*="#"]').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top,
-    }, 500, 'linear')
+    var target = $(this).attr('href');
+    if (target.startsWith('#') && $(target).length) {
+        e.preventDefault();
+        if (window.lenis) {
+            window.lenis.scrollTo(target, { duration: 1.2 });
+        } else {
+            $('html, body').animate({ scrollTop: $(target).offset().top }, 500, 'linear');
+        }
+    }
 });
-
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
 
 
 // Start of Tawk.to Live Chat
