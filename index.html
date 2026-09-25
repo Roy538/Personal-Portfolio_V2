@@ -706,6 +706,10 @@
 <!-- typed.js cdn -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
  
+<!-- vanilla tilt.js and scroll reveal must load before js/script.js, which calls VanillaTilt.init and ScrollReveal on load -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
+
 <!-- particle.js links -->
 <script src="./js/particles.min.js"></script>
 <script src="./js/app.js"></script>
@@ -724,19 +728,13 @@
     <!-- <script src="particles.js"></script>
     <script src="./experience/experience.js"></script> -->
 
-    <!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
 <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
     <!-- Transition Animation JS -->
-     <script src="https//unpkg.com/aos@next/dist/aos.js"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script>
         AOS.init({offset:0});
      </script>
